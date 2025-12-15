@@ -9,6 +9,12 @@ public:
     static std::string PackLogin(const std::string& login, const std::string& password);
     static std::string PackApplication(const std::string& token, int section_id, const std::string& text);
     static std::string PackModeration(const std::string& token, int student_id, bool approve);
+    
+    static NotificationsResponse UnpackNotifications(const std::string& json);
+    static ApplicationsHistoryResponse UnpackHistory(const std::string& json);
+
+    
+    static std::string PackCancelApplication(const std::string& token, int application_id);
 
     
     static bool UnpackSimpleSuccess(const std::string& json);
